@@ -1,16 +1,30 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './pages/Login';
+import DashboardLayout from './pages/DashboardLayout';
+import Overview from './pages/Overview';
+import Analytics from './pages/Analytics';
+
 function App() {
-  const [count, setCount] = useState(0)
+  const isAuthenticated = true; // Replace with actual auth logic later
 
   return (
-    <div className='text-[5em] font-bold '>
-      ok
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/"
+          element={isAuthenticated ? <DashboardLayout /> : <Navigate to="/login" />}
+        >
+          <Route index element={<Overview />} />
+          <Route path="analytics" element={<Analytics />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
+
