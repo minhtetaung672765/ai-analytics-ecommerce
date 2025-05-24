@@ -7,8 +7,10 @@ import DashboardLayout from './pages/DashboardLayout';
 import Overview from './pages/Overview';
 import Analytics from './pages/Analytics';
 
+import { useAuth } from './context/AuthContext';
+
 function App() {
-  const isAuthenticated = true; // Replace with actual auth logic later
+  const { isAuthenticated } = useAuth();
 
   return (
     <Router>
