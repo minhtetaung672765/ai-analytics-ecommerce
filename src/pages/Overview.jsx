@@ -53,7 +53,7 @@ export default function Overview() {
                             <XAxis dataKey="product__category" />
                             <YAxis />
                             <Tooltip />
-                            <Bar dataKey="quantity_sold" fill="#3b82f6" />
+                            <Bar dataKey="quantity_sold" fill="#9900cc" />
                         </BarChart>
                     </ResponsiveContainer>
                 </div>
@@ -63,7 +63,7 @@ export default function Overview() {
                         {top_customers.map((c, i) => (
                             <div key={i} className="flex justify-between bg-gray-50 p-3 rounded border">
                                 <span>{c.customer__name}</span>
-                                <span className="text-blue-600 font-semibold">${c.total_spent}</span>
+                                <span className="text-purple-600 font-semibold">${c.total_spent}</span>
                             </div>
                         ))}
                     </div>
@@ -83,7 +83,7 @@ export default function Overview() {
 function StatCard({ label, value, color }) {
     return (
         <div className={`p-4 rounded shadow ${color}`}>
-            <p className="text-sm text-gray-500">{label}</p>
+            <p className=" text-gray-500">{label}</p>
             <p className="text-2xl font-bold text-gray-800">{value}</p>
         </div>
     );

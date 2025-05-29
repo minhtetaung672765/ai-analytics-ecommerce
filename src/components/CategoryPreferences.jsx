@@ -7,7 +7,7 @@ import {
     ResponsiveContainer
 } from 'recharts';
 
-const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#6366f1', '#14b8a6', '#a855f7'];
+const COLORS = ['#9900cc', '#10b981', '#f59e0b', '#ef4444', '#6366f1', '#14b8a6', '#a855f7'];
 
 function GenderPieChart({ data, gender }) {
     if (!data || data.length === 0) return null;
@@ -68,7 +68,7 @@ export default function CategoryPreferences({ data }) {
             {/* Age Groups Section */}
             {Object.entries(preferences).map(([ageGroup, genderData]) => (
                 <div key={ageGroup} className="mb-10">
-                    <h3 className="text-lg font-semibold mb-4 text-blue-700">{ageGroup}</h3>
+                    <h3 className="text-lg mb-4">Age: <span className="text-lg font-semibold mb-4 text-purple-700">{ageGroup}</span></h3>
                     {/* <div className="flex flex-wrap gap-6"> */}
                     <div className="columns-2 gap-6">
                         {Object.entries(genderData).map(([gender, data]) => (

@@ -26,7 +26,7 @@ export default function Login() {
                 onSubmit={handleSubmit}
                 className="bg-white p-6 rounded shadow-md space-y-4 w-full max-w-sm"
             >
-                <h2 className="text-xl font-bold text-center text-blue-700">Login</h2>
+                <h2 className="text-xl font-bold text-center text-purple-700">Login</h2>
                 {error && <p className="text-red-500 text-sm">{error}</p>}
                 <input
                     type="text"
@@ -46,7 +46,7 @@ export default function Login() {
                     className="w-full p-2 border rounded"
                     required
                 />
-                <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded">
+                <button type="submit" className="w-full bg-purple-600 text-white py-2 rounded">
                     Login
                 </button>
             </form>

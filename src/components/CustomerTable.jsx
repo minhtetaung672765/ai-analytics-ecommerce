@@ -1,7 +1,7 @@
 export default function CustomerTable({ data }) {
     return (
         <div className="overflow-x-auto">
-            <table className="w-full text-sm border rounded">
+            <table className="w-full  border rounded">
                 <thead className="bg-gray-100">
                     <tr>
                         <th className="p-2">Name</th>

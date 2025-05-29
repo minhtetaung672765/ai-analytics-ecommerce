@@ -1,6 +1,7 @@
 import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
 
-const COLORS = ['#4f46e5', '#16a34a', '#f97316', '#dc2626'];
+const COLORS = ['#9900cc', '#16a34a', '#f97316', '#dc2626'];
+// const COLORS = ['#4f46e5', '#16a34a', '#f97316', '#dc2626'];
 
 export default function CustomerSegmentation({ data }) {
     if (!data?.segment_summary || !data?.preview) return null;
@@ -14,7 +15,8 @@ export default function CustomerSegmentation({ data }) {
         <div className="bg-white p-6 rounded shadow-md space-y-6">
             <div>
                 <h2 className="text-xl font-bold mb-2">Customer Segmentation</h2>
-                <p className="text-gray-600">Overview of customer groups based on behavior patterns</p>
+                <p className="text-gray-600 mb-2">Overview of customer groups based on behavior patterns - determines <b>Potential and Loyalty</b></p>
+
             </div>
 
             {/* Pie Chart */}
@@ -38,6 +40,7 @@ export default function CustomerSegmentation({ data }) {
             </div>
 
             {/* Preview Table */}
+            {/* <p className="text-gray-600"><b>Factors:</b> [Spend | Purchase Frequency | Recency ]</p> */}
             <div>
                 <h3 className="font-semibold text-gray-700 mb-2">Sample Customers</h3>
                 <div className="overflow-auto max-h-64">

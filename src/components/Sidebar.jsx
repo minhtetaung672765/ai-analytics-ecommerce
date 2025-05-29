@@ -9,7 +9,7 @@ export default function Sidebar({ activeTab, onSelectTab }) {
                     key={tab}
                     onClick={() => onSelectTab(tab)}
                     className={`block w-full text-left px-4 py-2 rounded 
-            ${activeTab === tab ? 'bg-blue-600 text-white' : 'hover:bg-gray-100 text-gray-700'}`}
+            ${activeTab === tab ? 'bg-purple-600 text-white' : 'hover:bg-purple-100 text-gray-700'}`}
                 >
                     {tab}
                 </button>

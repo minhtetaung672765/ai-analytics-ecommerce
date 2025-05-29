@@ -36,7 +36,7 @@ export default function TopProducts({ data }) {
                         <YAxis />
                         <Tooltip />
                         <Legend />
-                        <Bar dataKey="quantity" fill="#2563eb" name="Units Sold" />
+                        <Bar dataKey="quantity" fill="#9900cc" name="Units Sold" />
                         <Bar dataKey="revenue" fill="#10b981" name="Revenue ($)" />
                     </BarChart>
                 </ResponsiveContainer>

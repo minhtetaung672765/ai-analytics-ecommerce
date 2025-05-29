@@ -24,7 +24,7 @@ export default function DiscountUsage({ data }) {
 
     return (
         <div className="bg-white p-6 rounded shadow-md space-y-6">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div className="flex flex-col space-x-2 md:flex-row justify-between items-start md:items-center">
                 <div>
                     <h2 className="text-xl font-bold mb-1">Discount Usage Analysis</h2>
                     <p className="text-gray-600">
@@ -35,16 +35,16 @@ export default function DiscountUsage({ data }) {
                 </div>
 
                 {/* Toggle */}
-                <div className="mt-3 md:mt-0">
+                <div className="mt-3 md:mt-0 flex items-center flex-row">
                     <button
                         onClick={() => setView('quantity')}
-                        className={`px-4 py-1 rounded-l border ${view === 'quantity' ? 'bg-blue-600 text-white' : 'bg-white text-gray-700'}`}
+                        className={`px-4 py-1 rounded-l border ${view === 'quantity' ? 'bg-purple-600 text-white' : 'bg-white text-gray-700'}`}
                     >
                         Quantity
                     </button>
                     <button
                         onClick={() => setView('revenue')}
-                        className={`px-4 py-1 rounded-r border ${view === 'revenue' ? 'bg-blue-600 text-white' : 'bg-white text-gray-700'}`}
+                        className={`px-4 py-1 rounded-r border ${view === 'revenue' ? 'bg-purple-600 text-white' : 'bg-white text-gray-700'}`}
                     >
                         Revenue
                     </button>
